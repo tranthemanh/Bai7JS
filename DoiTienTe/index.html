@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen Doi Tien Te</title>
+</head>
+<body>
+    <table style="padding: 20px; width: 100px">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="amount"></td>
+            <td>
+                <select name="" id="sl1">
+                    <option value="VND">VietNam</option>
+                    <option value="USD">USD</option>
+                    <option value="Yen">Yen</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="sl2">
+                    <option value="VND">VietNam</option>
+                    <option value="USD">USD</option>
+                    <option value="Yen">Yen</option>
+                </select>
+            </td>
+            <td><button onclick="doitien()">Tinh</button></td>
+        </tr>
+    </table>
+    <p id="tt" style="color: #54a0ff">Result:</p>
+</body>
+<script>
+    function doitien() {
+        let x = document.getElementById('amount').value;
+        let y = document.getElementById('sl1').value;
+        let z = document.getElementById('sl2').value;
+        let tt;
+
+        if (y == "USD" && z == "VND"){
+            tt = "Result: " + (x * 23000) + " D";
+        }
+        else if (y == "USD" && z == "Yen"){
+            tt = "Result: " + (x * 160) + " Y";
+        }
+        else if (y == "USD" && z == "USD"){
+            tt = "Result: " + (x) + " $";
+        }
+        else if (y == "VND" && z == "USD"){
+            tt = "Result: " + (x / 23000) + " $";
+        }
+        else if (y == "VND" && z == "Yen"){
+            tt = "Result: " + (x / 163) + " Y";
+        }
+        else if (y == "VND" && z == "VND"){
+            tt = "Result: " + (x) + " D";
+        }
+        else if (y == "Yen" && z == "USD"){
+            tt = "Result: " + (x / 160) + " $";
+        }
+        else if (y == "Yen" && z == "VND"){
+            tt = "Result: " + (x * 163) + " D";
+        } else {
+            tt = "Result: " + (x) + " Y";
+        }
+        document.getElementById("tt").innerHTML = tt;
+    }
+</script>
+</html>
