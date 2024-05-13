@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh Chu Vi Hinh Tron</title>
+</head>
+<body>
+<p>Ban kinh hinh tron</p>
+<input type="number" id="bk" placeholder="Ban kinh hinh tron">
+<button onclick="chuVi()">Tinh</button>
+<p id="chuvi"></p>
+</body>
+<script>
+    function chuVi() {
+        let x = document.getElementById('bk').value;
+        let y = 3.14;
+        let cvht = 2 * x * y;
+        document.getElementById("chuvi").innerHTML = 'Chu vi hinh tron la: ' + cvht.toFixed(2);
+    }
+</script>
+</html>
