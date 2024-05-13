@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Ban kinh hinh tron</p>
+<input type="number" id="bk" placeholder="Ban kinh">
+<button onclick="tinhDT()">Tinh</button>
+<p id="dthc"></p>
+</body>
+<script>
+    function tinhDT() {
+        let x = document.getElementById('bk').value;
+        let y = 3.14;
+        let dt = x * x * y;
+        document.getElementById('dthc').innerHTML = 'Dien tich hinh chon bang: ' + dt;
+    }
+</script>
+</html>
