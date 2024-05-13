@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quan Ly Sinh Vien</title>
+</head>
+<body>
+    <h1>Quan Ly Sinh Vien</h1>
+    <table>
+       <tr>
+           <th>Sinh Vien</th>
+           <th>Vat Ly</th>
+           <th>Hoa</th>
+           <th>Sinh</th>
+       </tr>
+        <tr>
+            <td>Sinh vien A</td>
+            <td><input type="text" id="number1"></td>
+            <td><input type="text" id="number2"></td>
+            <td><input type="text" id="number3"></td>
+        </tr>
+    </table>
+    <button onclick="tinhdiem()">Tinh Diem</button>
+    <h2 id="diemtong">Tong Diem</h2>
+    <h2 id="diemtb">Diem Trung Binh</h2>
+</body>
+<script>
+    function tinhdiem() {
+        let x = document.getElementById('number1').value;
+        let y = document.getElementById('number2').value;
+        let z = document.getElementById('number3').value;
+        let dt = +x + +y + +z;
+        let dtb = dt/3;
+        document.getElementById('diemtong').innerHTML = 'Tong Diem: '+ dt;
+        document.getElementById('diemtb').innerHTML = 'Diem Trung Binh: '+ dtb.toFixed(2);
+    }
+</script>
+</html>
