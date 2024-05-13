@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May Tinh Cam Tay</title>
+</head>
+<style>
+    button{
+        width: 70px; /* Điều chỉnh chiều rộng */
+        height: 70px; /* Điều chỉnh chiều cao */
+        font-size: 20px; /* Điều chỉnh kích thước font chữ */
+        margin: 5px;
+    }
+    input{
+        width: 320px; /* Điều chỉnh chiều rộng */
+        height: 50px; /* Điều chỉnh chiều cao */
+        font-size: 40px; /* Điều chỉnh kích thước font chữ */
+        margin: 5px;
+    }
+</style>
+<body>
+<table >
+    <tr >
+        <td colspan="4"><input type="text" id="number"></td>
+    </tr>
+    <tr>
+        <td><button name="btn" value="1" onclick="nhapSo(value)">1</button></td>
+        <td><button name="btn" value="2" onclick="nhapSo(value)">2</button></td>
+        <td><button name="btn" value="3" onclick="nhapSo(value)">3</button></td>
+        <td><button name="op" value="+" onclick="nhapSo(value)">+</button></td>
+    </tr>
+    <tr>
+        <td><button name="btn" value="4" onclick="nhapSo(value)">4</button></td>
+        <td><button name="btn" value="5" onclick="nhapSo(value)">5</button></td>
+        <td><button name="btn" value="6" onclick="nhapSo(value)">6</button></td>
+        <td><button name="op" value="-" onclick="nhapSo(value)">-</button></td>
+    </tr>
+    <tr>
+        <td><button name="btn" value="7" onclick="nhapSo(value)">7</button></td>
+        <td><button name="btn" value="8" onclick="nhapSo(value)">8</button></td>
+        <td><button name="btn" value="9" onclick="nhapSo(value)">9</button></td>
+        <td><button name="op" value="*" onclick="nhapSo(value)" >*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="xoa()">AC</button></td>
+        <td><button name="btn">0</button></td>
+        <td><button name="kq" value="9" onclick="tinh()">=</button></td>
+        <td><button name="op" value="/" onclick="nhapSo(value)">/</button></td>
+    </tr>
+</table>
+</body>
+<script>
+    let num = document.getElementById('number');
+    function nhapSo(value) {
+        num.value += value;
+    }
+    function tinh() {
+        let KQ = eval(num.value);
+        num.value = KQ;
+    }
+    function xoa() {
+        num.value = "";
+    }
+</script>
+</html>
